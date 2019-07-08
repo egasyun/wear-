@@ -1,0 +1,59 @@
+.selected_csSearch{
+
+
+.field{
+  margin: 0% 10% 0% 10%;
+  border: solid 2px rgb(210, 210, 210);
+}
+.field h2{
+  text-align: center;
+  padding-top: 20px;
+}
+.tagWrapper1{
+  text-align: center;
+  width: 1000px;
+  justify-content: space-between;
+  padding-top: 5%;
+  margin: auto;
+
+}
+.tagWrapper2{
+  justify-content: center;
+  padding-top: 5%;
+}
+label{
+  display: inline;
+}
+.checkBox{
+  padding-left: 40px;
+}
+.favorite{
+  text-align: center;
+  padding-top: 5%;
+}
+.item{
+  padding: 0 4% 0 4%;
+}
+.icon{
+  width: 40%;
+}
+.submitWrapper{
+  text-align: center;
+  padding: 5% 0 3% 0;
+}
+.submit{
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+
+  color: rgb(255, 182, 73);
+  border: solid 2px rgb(255, 182, 73);
+  border-radius: 3px;
+  transition: .4s;
+}
+.submit:hover {
+  background: rgb(255, 182, 73);
+  color: white;
+}
+
+}

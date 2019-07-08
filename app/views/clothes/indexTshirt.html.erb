@@ -1,0 +1,11 @@
+<div class="container">
+
+  <% selected_clothes("t-shirt").each do |c| %>
+
+    <div class="item">
+      <%= c.name %>
+      <%= image_tag c.image.to_s %>
+      <%= link_to "詳細へ", clothe_path(c.id) %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,43 @@
+.IndexKnit{
+
+  h1{
+    padding-left: 8%;
+    padding-top: 20px;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .item{
+    background-color: white;
+    height: 300px;
+    width: 230px;
+    margin-top: 40px;
+  }
+  .imageBox{
+    height: 280px;
+    width: 230px;
+    position: relative;
+  }
+  .image{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+  }
+
+
+
+
+
+
+
+}

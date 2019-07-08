@@ -1,0 +1,41 @@
+<div class="ClothesShow">
+<div class="body">
+<div class="borderbox">
+<div class="box flex-container">
+
+
+
+
+<div class="imagebox">
+  <%= image_tag @clothe.image.to_s ,{ :class => "image" } %>
+</div>
+<div class="detail">
+  <div class="detailInside">
+
+  <div class="name flex-container">
+    <p>ブランド</p>
+    <p>：<%= @clothe.name %></p>
+  </div>
+  <div class="genre flex-container">
+    <p>ジャンル</p>
+    <p>：<%= @clothe.genre %></p>
+  </div>
+  <div class="buy_date flex-container">
+    <p>購入日</p>
+    <p>：<%= @clothe.buy_date %></p>
+  </div>
+  <div class="memo">
+    <p>メモ：</p>
+    <p><%= @clothe.memorandum %></p>
+  </div>
+  <div class="submitWrapper">
+    <%= link_to "編集する", edit_clothe_path(@clothe.id) ,class: "btn submit" %>
+  </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>

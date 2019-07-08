@@ -1,0 +1,91 @@
+<head>
+  <link rel="stylesheet" href="../../assets/stylesheets/clothes/index.scss">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
+</head>
+<div class="clothesIndex">
+
+
+<div class="body">
+  <div class="link">
+    <%= link_to "アイテムを登録する", new_clothe_path, class: "btn-flat-border"%>
+  </div>
+  <div class="container">
+    <div class="all genre">
+      <p class = "allIcon">all</p>
+      <p class = "genreName">すべてのアイテム</p>
+      <a href="/clothes/IndexAll"></a>
+
+    </div>
+    <div class="Tshirt genre">
+      <%= image_tag("Tシャツ.png" ,:class => "icon") %>
+      <p class = "genreName">Tシャツ-・カットソー</p>
+      <a href="/clothes/indexTshirt"></a>
+    </div>
+    <div class="shirt genre">
+      <%= image_tag("Yシャツ.png" ,:class => "icon") %>
+      <p class = "genreName">シャツ・ブラウス</p>
+      <a href="/clothes/IndexShirt"></a>
+    </div>
+    <div class="knit genre">
+      <%= image_tag("セーター.png" ,:class => "icon") %>
+      <p class = "genreName">ニット</p>
+      <a href="/clothes/IndexKnit"></a>
+    </div>
+    <div class="sweat-shirt genre">
+      <%= image_tag("パーカー.jpeg" ,:class => "icon") %>
+      <p class = "genreName">スウェット・パーカー</p>
+      <a href="/clothes/IndexSweatShirt"></a>
+    </div>
+    <div class="jacket_outer genre">
+      <%= image_tag("ダウンジャケット.png" ,:class => "icon") %>
+      <p class = "genreName">ジャケット・アウター</p>
+      <a href="/clothes/IndexJacketOuters"></a>
+    </div>
+    <div class="suit genre">
+      <%= image_tag("スーツ.jpeg" ,:class => "icon") %>
+      <p class = "genreName">スーツ</p>
+      <a href="/clothes/IndexSuit"></a>
+    </div>
+    <div class="pants genre">
+      <%= image_tag("ジーンズ.jpeg" ,:class => "icon") %>
+      <p class = "genreName">ボトムス</p>
+      <a href="/clothes/IndexPants"></a>
+    </div>
+    <div class="shoes genre">
+      <%= image_tag("シューズ.jpeg" ,:class =>  "icon") %>
+      <p class = "genreName">シューズ</p>
+      <a href="/clothes/IndexShoes"></a>
+    </div>
+    <div class="legswear genre">
+      <%= image_tag("ソックス.jpeg" ,:class =>  "icon") %>
+      <p class = "genreName">レッグウェア</p>
+      <a href="/clothes/IndexLegWear"></a>
+    </div>
+    <div class="bag genre">
+      <%= image_tag("バッグ.jpeg" ,:class =>  "icon") %>
+      <p class = "genreName">バッグ</p>
+      <a href="/clothes/IndexBag"></a>
+    </div>
+    <div class="accessories genre">
+      <%= image_tag("ネックレス.jpeg" ,:class =>  "icon") %>
+      <p class = "genreName">アクセサリー</p>
+      <a href="/clothes/IndexAccessories"></a>
+    </div>
+    <div class="watch genre">
+      <%= image_tag("腕時計.jpeg" ,:class =>  "icon") %>
+      <p class = "genreName">時計</p>
+      <a href="/clothes/IndexWatch"></a>
+    </div>
+    <div class="others genre">
+      <p class = "othersIcon">others</p>
+      <p class = "genreName">その他</p>
+      <a href="/clothes/IndexOthers"></a>
+    </div>
+    <div class="emptyBox">
+
+    </div>
+  </div>
+</div>
+
+
+</div>

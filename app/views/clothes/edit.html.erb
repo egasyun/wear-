@@ -1,0 +1,64 @@
+<div class="ClothesEdit">
+<div class="body">
+
+
+
+  <%= form_for @clothe do |c| %>
+    <div class="field">
+      <div class="title">
+        <h2>アイテム編集</h2>
+      </div>
+      <div class="image">
+        <%= c.label :"画像：" %>
+        <div class="previewWrapper">
+          <%= c.file_field :image , onchange:"previewFile()" ,:class=>"" %>
+            <!--<div class="previewBox">-->
+            <img src="" alt=""> <!-- プレビューの表示枠を用意 -->
+            <!-- <div class="previewArea"></div> -->
+          <!--</div>-->
+        </div>
+      </div>
+
+      <div class="item-details">
+        <div class="brand">
+          <%= c.label :"ブランド：" %>
+          <%= c.text_field :name, :class => 'brand_form',  :size => 30 %>
+        </div>
+
+        <div class="genre">
+          <%= c.label :"ジャンル：" %>
+          <%= c.select :genre, [["Tシャツ-・カットソー", "t-shirt"],["シャツ・ブラウス", "shirt"],["ニット", "knit"],["スウェット・パーカー", "sweat-shirt"],["ジャケット・アウター", "jacket_outer"],["スーツ", "suit"],["ボトムス", "pants"],["シューズ", "shoes"],["レッグウェア", "legswear"],["バッグ", "bag"],["アクセサリー", "accessories"],["時計", "watch"],["その他", "others"]] %>
+        </div>
+
+        <div class="buy_date flex-container">
+          <p>購入日：&ensp;&ensp;</p>
+          <%= raw sprintf(
+               c.date_select(
+               :buy_date,
+               use_month_numbers: true,
+               start_year: 1990,
+               end_year: (Time.now.year),
+               default: Date.new(Time.now.year, Time.now.month, Time.now.day),
+               date_separator: '%s'),
+             '年 ', '月 ') + '日' %>
+        </div>
+        <div class="memoWrapper flex-container">
+          <p>メモ：&ensp;&ensp;&ensp;&ensp;</p>
+          <%= c.text_area :memorandum, class: "memo", size: "60 x 10" %>
+        </div>
+      </div>
+      <div class="submitWrapper">
+        <%= c.submit "更新する", :class => "submit" %>
+        <%= link_to "削除する", clothe_path(@clothe), method: :delete ,:class => "delete" %>
+      </div>
+      <% end %>
+    </div>
+
+
+
+
+
+
+
+</div>
+</div>

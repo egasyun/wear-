@@ -1,0 +1,50 @@
+.IndexAll{
+
+  h1{
+    padding-left: 8%;
+    padding-top: 20px;
+  }
+  .container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .item{
+    background-color: white;
+    height: 360px;
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  .emptyBox{
+    background-color: rgb(241, 242, 242);
+    height: 1px
+  }
+  .imageBox{
+    position: relative;
+  }
+  .image{
+    object-fit: cover;
+    height: 325px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+  .link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+  }
+  .item  p{
+    vertical-align: middle;
+    line-height: 35px;
+  }
+
+
+
+
+
+
+
+}

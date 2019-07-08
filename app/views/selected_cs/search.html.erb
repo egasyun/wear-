@@ -1,0 +1,74 @@
+<div class="selected_csSearch">
+  <div class="body">
+
+
+
+    <div class="field">
+
+      <%= form_with(model: @cordinate, local: true) do |c| %>
+      <h2>コーディネートを選ぶ</h2>
+        <div class="tagWrapper1 flex-container">
+          <div class="checkBox">
+            <label>
+              <%= c.check_box :short_sleeve %>
+              <p>#半袖</p>
+              <%= image_tag("Tシャツ.png" ,:class => "icon") %>
+            </label>
+          </div>
+          <div class="checkBox">
+              <label>
+              <%= c.check_box :long_sleeve %>
+              <p>#長袖</p>
+              <%= image_tag("長袖.png" ,:class => "icon") %>
+            </label>
+          </div>
+          <div class="checkBox">
+            <label>
+              <%= c.check_box :thick_long_sleeve %>
+              <p>#長袖（厚着)</p>
+              <%= image_tag("セーター.png" ,:class => "icon") %>
+            </label>
+          </div>
+          <div class="checkBox">
+            <label>
+              <%= c.check_box :coat %>
+              <p>＃コートあり</p>
+              <%= image_tag("ダウンジャケット.png" ,:class => "icon") %>
+            </label>
+          </div>
+        </div>
+      <div class="cheakbox favorite">
+        <%= c.check_box :favorite %>
+        <%= c.label :favorite, "お気に入り" %>
+      </div>
+      <div class="tagWrapper2 flex-container">
+        <div class="item">
+          <div class="cheakbox">
+            <%= c.check_box :movable %>
+            <%= c.label :movable, "#動きやすい" %>
+          </div>
+        </div>
+        <div class="item">
+          <div class="cheakbox">
+            <%= c.check_box :dirty %>
+            <%= c.label :dirty, "#雨の日も着れる" %>
+          </div>
+        </div>
+        <div class="item">
+          <div class="cheakbox">
+            <%= c.check_box :formal %>
+            <%= c.label :formal, "#フォーマル" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="submitWrapper">
+        <%= c.submit "探す" , :class=>"submit" %>
+      </div>
+      <% end %>
+    </div>
+
+
+
+    </div>
+</div>

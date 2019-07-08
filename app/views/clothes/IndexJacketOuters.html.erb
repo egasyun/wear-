@@ -1,0 +1,23 @@
+<div class="IndexJacketOuters">
+<div class="body">
+  <h1>ジャケット・アウター</h1>
+
+<div class="container">
+
+<% selected_clothes("jacket_outer").each do |c| %>
+  <div class="item">
+  <div class="imageBox">
+    <%= image_tag c.image.to_s , { :class => "image" } %>
+    <%= link_to "", clothe_path(c.id) , { :class => "link" } %>
+
+  </div>
+  <%= c.name %>
+  </div>
+<% end %>
+
+</div>
+
+
+
+</div>
+</div>

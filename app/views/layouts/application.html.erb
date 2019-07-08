@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+
+      <a href="top.html.erb" class="a">（タイトル）</a>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout btn' %>
+
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <footer>
+    <div class="footerWrpper">
+    <ul class="linkwrapper ">
+      <li class = "linkBox"> <%= link_to  "コーディネートを選ぶ", selected_cs_search_path ,class: "link"%> </li>
+      <li class = "linkBox"> <%= link_to  "アイテム一覧", clothes_path ,class: 'link'%> </li>
+      <li class = "linkBox"> <%= link_to  "コーディネート一覧", cordinates_path ,class: 'link'%> </li>
+    </ul>
+    <div class="right">
+      <p>COPYRIGHT ShunsukeEgashira ALL RIGHTS RESERVED.</p>
+      <p>サイト内の文章、画像などの著作物はShunsukeEgashiraに属します。複製、無断転載を禁止します。</p>
+    </div>
+    </div>
+  </footer>
+
+</html>

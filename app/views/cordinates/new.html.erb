@@ -1,0 +1,271 @@
+<div class="cordinatesNew">
+<div class="body">
+
+
+  <h1>コーディネートの登録/アイテムの選択</h1>
+  <%# <%= form_for @cordinate do |f| %> %>
+  <form action="/cordinates" method="POST">
+
+  <div class="submitWrapper">
+    <input class="submit"type="submit" name="" value="選択を終了する"/>
+  </div>
+
+
+  <div class="accordion " id="accordionExample">
+    <div class="flex-container">
+
+
+    <div class="card">
+      <div class="card-header" id="heading1">
+        <h2 class="mb-0">
+          <button class=" btn btn-link margin" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            Tシャツ・カットソー
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading3">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            シャツ・ブラウス
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading4">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            ニット
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading5">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed margin" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            スウェット・パーカー
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading6">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+            ジャケット・アウター
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading7">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+            スーツ
+          </button>
+        </h2>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-header" id="heading9">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+            ボトムス
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading10">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+            靴
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading11">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+            レッグウェア
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading12">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+            バッグ
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading13">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+            アクセサリー
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading14">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+            時計
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="heading15">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+            その他
+          </button>
+        </h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header ">
+
+      </div>
+    </div>
+
+
+    </div>
+
+    <div class="imageWrapper">
+    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+      <div class="card-body flex-container">
+        <% selected_clothes("t-shirt").each do |s| %>
+          <div class="item">
+            <div class="imageBox">
+              <label>
+                <%= image_tag s.image.to_s ,:class => "image"  %>
+                <%= check_box_tag 'cordinates[ids][]', "id",false,id:"cordenates_ids_#{s}"%>
+                <!-- <input type="checkbox" name="id[]" value=s.id> -->
+                 <%# <%= f.check_box :id[], {multiple: true},s.id %>  %>
+              </label>
+            </div>
+            <p><%= s.name %></p>
+          </div>
+        <% end %>
+          <div class="emptyBox">
+          </div>
+          <div class="emptyBox">
+          </div>
+          <div class="emptyBox">
+          </div>
+      </div>
+    </div>
+
+
+    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+      <div class="card-body">
+        2Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+      <div class="card-body">
+      3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+      <div class="card-body">
+      1Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+
+    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+      <div class="card-body">
+    2Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+      <div class="card-body">
+    3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body">
+      1Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+
+    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+      <div class="card-body">
+    3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+    </div>
+
+    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+      <div class="card-body">
+    1Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+
+    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+      <div class="card-body">
+  2Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+      <div class="card-body">
+  3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+      <div class="card-body">
+      3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+      <div class="card-body">
+      1Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+
+    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionExample">
+      <div class="card-body">
+    2Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+    </form>
+    <%# <% end %> %>
+    </div>
+  </div>
+</div>
+</div>

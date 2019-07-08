@@ -1,0 +1,3 @@
+module ClothesHelper
+  
+end

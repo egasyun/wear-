@@ -1,0 +1,58 @@
+.ClothesShow{
+
+
+
+  .borderbox{
+    margin: 0% 10%;
+    border: solid 2px rgb(210, 210, 210);
+  }
+  .box{
+    margin: 5% 15%;
+    justify-content: space-around;
+  }
+  .imagebox{
+
+  }
+
+  .image{
+    object-fit: cover;
+    height: 594px;
+    width: 440px;
+    border-radius: 8px;
+  }
+  .detail{
+    background-color: white;
+    width: 350px;
+    margin: 0% 3%;
+    border-radius: 15px;
+  }
+  .detailInside{
+    margin: 15% 10%;
+  }
+  .memo{
+
+  }
+  .submitWrapper{
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .submit{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+
+    color: rgb(255, 182, 73);
+    border: solid 2px rgb(255, 182, 73);
+    border-radius: 3px;
+    transition: .4s;
+  }
+  .submit:hover {
+    background: rgb(255, 182, 73);
+    color: white;
+  }
+
+
+
+
+
+}

@@ -1,0 +1,50 @@
+.cordinatesIndex{
+
+
+  .btn-flat-border {
+    display: inline-block;
+    padding: 18px 40px;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .btn-flat-border:hover {
+    background: #67c5ff;
+    color: white;
+  }
+  .link{
+    text-align: center;
+    padding-top: 15px;
+  }
+
+
+  .genreWrapper{
+    margin:30px 10% 0 10%;
+    justify-content: space-between;
+  }
+  .genreBox{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .icon{
+    width: 50%;
+    padding-top: 35px;
+  }
+  .genreBox p{
+    padding-top: 15px;
+  }
+  .genreBox a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+  }
+}

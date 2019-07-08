@@ -1,0 +1,91 @@
+.cordinatesNew{
+
+  h1{
+    padding: 10px 0px 10px 70px;
+  }
+  .submitWrapper{
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .submit{
+    display: inline-block;
+    padding: 14px 35px;
+    text-decoration: none;
+
+    color: rgb(255, 182, 73);
+    border: solid 2px rgb(255, 182, 73);
+    border-radius: 3px;
+    transition: .4s;
+  }
+  .submit:hover {
+    background: rgb(255, 182, 73);
+    color: white;
+  }
+  .flex-container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-header{
+    width: 190px;
+
+  }
+  .btn{
+    width: 100%;
+  }
+  .btnwrapper{
+    text-align: center;
+  }
+
+
+
+  .imageWrapper{
+    padding: 0 3%;
+  }
+  .card-body{
+    justify-content: flex-start;
+    justify-content: space-between
+  }
+  .item{
+    background-color: white;
+    height: 360px;
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .imageBox{
+    position: relative;
+  }
+  .item p{
+    vertical-align: middle;
+  }
+  .emptyBox{
+    height: 1px;
+    width: 250px;
+  }
+  .image{
+    height: 325px;
+    width: 250px;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .checkbox{
+    /* チェックボックスの位置は絶対位置にします。 */
+    position: absolute;
+    /* チェックボックスは、親要素の右上から12pxの位置に配置します。 */
+    top: 22px;
+    right: 12px;
+    /* チェックボックスを大きくします。 */
+    transform: scale(2);
+    /* チェックボックスにカーソルを合わせたときに、
+    カーソルが指のマークになるようにします。 */
+    cursor: pointer;
+  }
+
+
+
+}
